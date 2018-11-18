@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hit.zhou.scanmachine.ui.MachineDetailActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/detail_toolbar"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/old_orange"
+        >
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="详情"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+    </android.support.v7.widget.Toolbar>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:background="@color/old_orange"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+        <com.hit.zhou.scanmachine.common.utils.EasyRefreshLayout
+            android:id="@+id/easyRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/circle"
+                                android:layout_width="200dp"
+                                android:layout_height="200dp" />
+
+                            <TextView
+                                style="@style/textBaseStyle"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/textView"
+                                android:layout_centerHorizontal="true"
+                                android:text="目前得分"
+                                android:textSize="20sp" />
+                            <TextView
+                                style="@style/textScoreStyle"
+                                android:textSize="30sp"
+                                android:text="92"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView" />
+
+                            <TextView
+                                android:id="@+id/time"
+                                style="@style/textBaseStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:text="更新于3秒前"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/image1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:src="@mipmap/ic_launcher" />
+                                <TextView
+                                    style="@style/textBaseStyle"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="动力传感器"
+                                    android:textSize="12sp"
+                                    android:singleLine="true"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/image2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:src="@mipmap/ic_launcher" />
+                                <TextView
+                                    style="@style/textBaseStyle"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="转速传感器"
+                                    android:textSize="12sp"
+                                    android:singleLine="true"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/image3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:src="@mipmap/ic_launcher" />
+                                <TextView
+                                    style="@style/textBaseStyle"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="温度传感器"
+                                    android:textSize="12sp"
+                                    android:singleLine="true"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="1">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/image4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:src="@mipmap/ic_launcher" />
+                                <TextView
+                                    style="@style/textBaseStyle"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="压力传感器"
+                                    android:textSize="12sp"
+                                    android:singleLine="true"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                style="@style/textBaseStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:text = "过去七日"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:background="@color/gray"/>
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/lineChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="8"
+                                android:layout_margin="5dp"
+                                android:background="@color/white">
+                            </com.github.mikephil.charting.charts.LineChart>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </com.hit.zhou.scanmachine.common.utils.EasyRefreshLayout>
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/detail_loading"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AVLoadingIndicatorView"
+            android:visibility="visible"
+            app:indicatorName="BallPulseIndicator"
+            app:indicatorColor="@color/old_orange"
+            />
+
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>
